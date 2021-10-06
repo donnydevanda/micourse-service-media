@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
   // add host URL
   const mappedMedia = media.map((m) => {
     m.image = `${req.get("host")}/${m.image}}`;
-    return mappedMedia;
+    return m;
   });
 
   return res.json({
